@@ -4,7 +4,7 @@
   this.cronapi = this.cronapi || {};
 
    /**
-   * @categoryName Power BI
+   * @categoryName PowerBI
    */
   this.cronapi.myfunctions = this.cronapi.myfunctions || {};
   
@@ -13,15 +13,14 @@
    * @name Embutir Relatório
    * @description Embutir Relatório
    * @multilayer false
-   * @param {ObjectType.STRING} input Param Description
+   * @param {ObjectType.STRING} embedContainerId Embed Container Id
+   * @param {ObjectType.STRING} accessToken Access Token
+   * @param {ObjectType.STRING} embedUrl Embed URL
+   * @param {ObjectType.STRING} embedReportId Embed Report ID
+   * @param {ObjectType.STRING} tokenType Token Type
    * @returns {ObjectType.STRING}
    */
-  this.cronapi.myfunctions.powerBIEmbedReport = function(
-    /** @type {ObjectType.STRING} @description embedContainerId: Embed Container Id */embedContainerId,
-    /** @type {ObjectType.STRING} @description accessToken: Access Token */accessToken, 
-    /** @type {ObjectType.STRING} @description embedUrl: Embed URL */embedUrl, 
-    /** @type {ObjectType.STRING} @description embedReportId: Embed Report ID */embedReportId, 
-    /** @type {ObjectType.STRING} @description tokenType: Token Type */tokenType) {
+  this.cronapi.myfunctions.powerBIEmbedReport = function(embedContainerId, accessToken, embedUrl, embedReportId, tokenType) {
         // Get models. models contains enums that can be used.
         let models = window['powerbi-client'].models;
 
