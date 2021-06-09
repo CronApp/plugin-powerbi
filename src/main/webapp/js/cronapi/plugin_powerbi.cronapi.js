@@ -54,7 +54,7 @@
         powerbi.bootstrap(embedContainer, { type: "report" });
 
         // Embed the report and display it within the div container.
-        report = powerbi.embed(embedContainer, config);
+        let report = powerbi.embed(embedContainer, config);
 
         // report.off removes all event handlers for a specific event
         report.off("loaded");
